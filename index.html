@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cassette Rack v2</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Link to external CSS file (relative path from index.html) -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Cassette Rack</h1>
+      <p class="subheading">Version 2 -- Mobile-First Layout</p>
+    </header>
+
+    <!-- Horizontally scrollable row of 12 cassettes -->
+    <section class="cassette-row-wrapper" aria-label="Cassette rack">
+      <div class="cassette-row">
+        <!-- Later we’ll attach Spotify links and background images -->
+        <a class="cassette-slot" href="#" data-slot="1">Cassette 1</a>
+        <a class="cassette-slot" href="#" data-slot="2">Cassette 2</a>
+        <a class="cassette-slot" href="#" data-slot="3">Cassette 3</a>
+        <a class="cassette-slot" href="#" data-slot="4">Cassette 4</a>
+        <a class="cassette-slot" href="#" data-slot="5">Cassette 5</a>
+        <a class="cassette-slot" href="#" data-slot="6">Cassette 6</a>
+        <a class="cassette-slot" href="#" data-slot="7">Cassette 7</a>
+        <a class="cassette-slot" href="#" data-slot="8">Cassette 8</a>
+        <a class="cassette-slot" href="#" data-slot="9">Cassette 9</a>
+        <a class="cassette-slot" href="#" data-slot="10">Cassette 10</a>
+        <a class="cassette-slot" href="#" data-slot="11">Cassette 11</a>
+        <a class="cassette-slot" href="#" data-slot="12">Cassette 12</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Cassette Rack – <span id="version-label"></span>
+  </footer>
+
+  <!-- Link to external JS file. `defer` waits until HTML is parsed. -->
+  <script src="app.js" defer></script>
+</body>
+</html>
