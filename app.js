@@ -3,7 +3,6 @@
 // Central place to define your version:
 const CASSETTE_RACK_VERSION = "Version 2.0.0";
 
-// Run code after HTML is parsed (since we used `defer`, DOMContentLoaded is safe but optional)
 document.addEventListener("DOMContentLoaded", () => {
   // Set the version label in the footer
   const versionSpan = document.getElementById("version-label");
@@ -11,15 +10,16 @@ document.addEventListener("DOMContentLoaded", () => {
     versionSpan.textContent = CASSETTE_RACK_VERSION;
   }
 
-  // Example: access all cassette slots (we’ll use this later for Spotify links)
+  // Get all cassette slots (now 5 × 12 = 60)
   const cassetteSlots = document.querySelectorAll(".cassette-slot");
 
   cassetteSlots.forEach((slot) => {
     slot.addEventListener("click", (event) => {
       // For now, prevent navigation and just log which slot was clicked
       event.preventDefault();
-      const slotNumber = slot.dataset.slot;
-      console.log(`Cassette slot ${slotNumber} clicked.`);
+      const column = slot.dataset.column;
+      const row = slot.dataset.row;
+      console.log(`Cassette slot column ${column}, row ${row} clicked.`);
     });
   });
 });
